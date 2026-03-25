@@ -1,17 +1,16 @@
-name: My First Pipeline
+name: Simple CI pipeline
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository 
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Run a simple command 
+      - name: Run a simple command
         run: echo "This is my pipeline run"
