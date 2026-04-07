@@ -3,6 +3,8 @@ name: Simple CI pipeline
 on:
   push:
     branches: ["main"]
+  pull_request:
+    branches: ["main"]
 
 jobs:
   build:
@@ -23,8 +25,3 @@ jobs:
 
       - name: pipeline break
         run: echo "pipeline is fixed"
-on:
-  push:
-    branches: ["main"]
-  pull_request:
-    branches: ["main"]
